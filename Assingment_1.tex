@@ -1,0 +1,247 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+\usepackage{tikz-qtree}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+% \providecommand{\abs}[1]{\left\vert#1\right\vert}
+% \providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+% \providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+% %\providecommand{\norm}[1]{\lVert#1\rVert}
+% \providecommand{\mtx}[1]{\mathbf{#1}}
+% \providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 1}
+\author{Ishwari Prashad - EE18BTECH11020}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+Download all latex-tikz and C codes from 
+%
+\begin{lstlisting}
+https://github.com/ipsingh85/EE4013/tree/main/Assingment_1/codes
+\end{lstlisting}
+\begin{lstlisting}
+https://github.com/ipsingh85/EE4013/tree/main/Assingment_1/Assingment_1.tex
+\end{lstlisting}
+\section{Problem}
+(Q 5) The preorder traversal of a binary search tree is $15$,$10$,$12$,$11$,$20$,$18$,$16$,$19$ which one of the following is postorder traversal of the tree?
+
+\begin{enumerate}
+    \item $10$,$11$,$12$,$15$,$16$,$18$,$19$,$20$
+    \item $11$,$12$,$10$,$16$,$19$,$18$,$20$,$15$
+    \item $20$,$19$,$18$,$16$,$15$,$12$,$11$,$10$
+    \item $19$,$11$,$18$,$20$,$11$,$12$,$10$,$15$
+\end{enumerate}
+\section{Solution}
+Answer : Option 2
+
+\textbf{Binary Search Tree} is a node-based binary tree data structure which has the following properties:
+\begin{enumerate}
+    \item The left subtree of a node contains only nodes with keys lesser than the node’s key.
+    \item The right subtree of a node contains only nodes with keys greater than the node’s key.
+    \item The left and right subtree each must also be a binary search tree.
+\end{enumerate}
+\textbf{Preorder traversal} 
+\newline
+ Algorithm preorder
+ \begin{enumerate}
+     \item Visit the root.
+     \item Traverse the left subtree.
+     \item Traverse the right subtree.
+ \end{enumerate}
+ \textbf{Postorder traversal} 
+ \newline
+ Algorithm Postorder
+ \begin{enumerate}
+     \item Traverse the left subtree.
+     \item Traverse the right subtree.
+     \item Visit the root.
+ \end{enumerate}
+ \textbf{Explanation : } 
+ \newline so  first we will convert this preorder traversal in to a binary search tree then print the postorder traversal.
+ \newline 
+ as we know first element of preorder traversal is root node and element with value less than root value make left subtree and element vaule greater than root value make right subtree.
+ \newline
+ \newline given preorder traversal $15$,$10$,$12$,$11$,$20$,$18$,$16$,$19$
+\newline
+root key      $15$
+\newline
+left subtree  $10$,$12$,$11$
+\newline
+right subtree $20$,$18$,$16$,$19$
+\newline
+similaraly for every left subtree and right subtree
+\vspace{5mm}
+
+
+\begin{tabular}{ |p{4cm}||p{0.8cm}|p{2cm}|p{2cm}|  }
+ \hline
+ \multicolumn{4}{|c|}{Country List} \\
+ \hline
+ preorder traversal& root node&left subtree&right subtree\\
+ \hline
+ $15$,$10$,$12$,$11$,$20$,$18$,$16$,$19$ & $15$ &$10$,$12$,$11$&$20$,$18$,$16$,$19$ \\
+ $10$,$12$,$11$&$10$&No element less than $10$&$12$,$11$\\
+ $12$,$11$&$12$& $11$ & No element greater than $12$ \\
+ $20$,$18$,$16$,$19$&$20$&  $18$,$16$,$19$ &  NA\\
+ $18$,$16$,$19$&   $18$  &$16$&$19$\\
+ 
+ \hline
+\end{tabular}
+
+\newline
+\vspace{5mm}
+using the table create a BST 
+\vspace{5mm}
+
+
+\tikzset{every tree node/.style={minimum width=2em,draw,circle},
+         blank/.style={draw=none},
+         edge from parent/.style=
+         {draw,edge from parent path={(\tikzparentnode) -- (\tikzchildnode)}},
+         level distance=1.5cm}
+\begin{tikzpicture}
+\Tree
+[.15     
+    [.10 
+    \edge[blank]; \node[blank]{};
+    \edge[]; [.12
+             \edge[];{11}
+             \edge[blank]; \node[blank]{};
+         ]
+    ]
+    [.20 
+    \edge[]; [.18
+             \edge[];{16}
+             \edge[];{19}
+             ]
+    \edge[blank];\node[blank]{};
+    ]
+]
+\end{tikzpicture}
+\vspace{10mm}
+\newline
+
+from above tree using postorder traversal algorithm print the postorder traversal
+\newline
+\textbf{hence postorder traversal}
+\textbf{$11$,$12$,$10$,$16$,$19$,$18$,$20$,$15$}
+
+
+
+\end{document}
