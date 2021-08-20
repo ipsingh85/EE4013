@@ -1,12 +1,8 @@
-
+#include<stdio.h>
 #include<limits.h>
 
 
-//#include<iostream>
-//#include<limits.h>
-//using namespace std;
-//int preIndex;
-// C++ program for finding postorder
+
 // traversal of BST from preorder traversal
 
  
@@ -43,7 +39,7 @@ void findPostOrderUtil(int pre[], int n, int minval,
     // lie in right subtree.
     findPostOrderUtil(pre, n, val, maxval, preIndex);
  
-    //cout<<val<<" ";
+    
     printf(" %d",val);
 }
  
