@@ -72,3 +72,6 @@ int main(void)
     findPostOrder(pre, n);
     return 0;
 }
+
+//time complexity O(n)
+//space complexity O(n)
