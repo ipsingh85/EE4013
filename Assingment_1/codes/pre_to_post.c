@@ -61,8 +61,11 @@ void findPostOrder(int pre[], int n)
 // Driver code
 int main(void)
 {
-    int pre[] = { 15,10,12,11,20,18,16,19 };
- 
+    //int pre[] = { 15,10,12,11,20,18,16,19 };
+    //different size tree
+    //int pre[]={7, 5, 3, 6, 9};//for size of 5
+    int pre[]={15,10,8,6,9,12,20,16,25,24,26};//size of 11 
+    //postorder of this tree is 6,9,8,12,10,16,24,26,25,20,15
     int n = sizeof pre / sizeof pre[0];
  
     // Calling function
